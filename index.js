@@ -1,12 +1,22 @@
 // TODO: Buatlah data dari kedua user di sini
 // Tentukan tipe data dan struktur data yang menurut kalian tepat
 // Kalian bisa membuat variabel lain untuk dimasukkan ke dalam atribut user agar lebih mudah dibaca
+const favoriteColor = {
+    firstUser: new Set(['Yellow', 'Pink', 'White', 'Purple']),
+    secondUser: new Set(['Blue', 'Black', 'Grey']),
+}
+const favoriteRestaurant = {
+    firstUser: new Set(['Bento', 'Sushi', 'Pancake', 'Eggy', 'Tempura', 'Bento', 'Eggy', 'Padang', 'Tteok', 'Sushi', 'Sushi']),
+    secondUser: new Set(['Tempura', 'Bento', 'Sushi', 'Pancake', 'Padang', 'Katsu', 'Geprek', 'Pancake', 'Eggy']),
+}
+
+
 const firstUser = {
     name: 'Monica',
     gender: 'Female',
     age: 17,
     email: 'monica@dingdong.com',
-    favoriteColor: ['Yellow', 'Pink', 'White', 'Purple'],
+    favoriteColor: [...favoriteColor.firstUser],
     isHavePet: 'Yes',
     education: [
         {
@@ -24,14 +34,14 @@ const firstUser = {
             city: 'Tangerang'
         }
     ],
-    favoriteRestaurant: ['Bento', 'Sushi', 'Pancake', 'Eggy', 'Tempura', 'Padang', 'Tteok']
+    favoriteRestaurant: [...favoriteRestaurant.firstUser]
 };
 const secondUser = {
     name: 'Wendy',
     gender: 'Male',
     age: 23,
     email: 'wendy@dingdong.com',
-    favoriteColor: ['Blue', 'Black', 'Grey'],
+    favoriteColor: [...favoriteColor.secondUser],
     isHavePet: 'No',
     education: [
         {
@@ -54,7 +64,7 @@ const secondUser = {
             city: 'Tangerang'
         }
     ],
-    favoriteRestaurant: ['Tempura', 'Bento', 'Sushi', 'Pancake', 'Padang', 'Katsu', 'Geprek', 'Eggy']
+    favoriteRestaurant: [...favoriteRestaurant.secondUser]
 };
 
 // TODO: Masukkan hasil akhir dari kedua user di sini
